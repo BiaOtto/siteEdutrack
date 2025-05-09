@@ -1,0 +1,345 @@
+/* BASE */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--cor-fundo-claro);
+    color: var(--cor-texto-claro);
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  body.dark-mode {
+    background-color: var(--cor-fundo-escuro);
+    color: var(--cor-texto-escuro);
+  }
+  
+  /* CABEÇALHO */
+  header {
+    background-color: var(--cor-card-claro);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--cor-borda-claro);
+  }
+  
+  header img {
+    height: 40px;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul a, #toggle-theme {
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    color: var(--cor-texto-claro);
+    font-weight: 600;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  body.dark-mode nav ul a,
+  body.dark-mode #toggle-theme {
+    color: var(--cor-texto-escuro);
+  }
+  
+  /* HERO */
+  .hero {
+    text-align: center;
+    padding: 3rem 2rem 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .hero h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero p {
+    font-size: 1.1rem;
+    color: var(--cor-texto-claro);
+  }
+  
+  body.dark-mode .hero p {
+    color: var(--cor-texto-escuro);
+  }
+  
+  /* CARDS DE CURSOS */
+  .cursos {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .cursos h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+  
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+  }
+  
+  .card {
+    background-color: var(--cor-card-claro);
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+  
+  .card h3 {
+    font-family: 'Poppins', sans-serif;
+    margin: 1rem 0 0.5rem;
+  }
+  
+  .card p {
+    color: #666;
+    font-size: 0.95rem;
+  }
+  
+  .card a {
+    display: inline-block;
+    margin-top: 1rem;
+    background-color: var(--cor-principal-claro);
+    color: rgb(0, 47, 255);
+    text-decoration: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .card a:hover {
+    background-color: var(--cor-hover-claro);
+  }
+  
+  body.dark-mode .card {
+    background-color: var(--cor-card-escuro);
+  }
+  
+  body.dark-mode .card a {
+    background-color: var(--cor-principal-escuro);
+    color: rgb(172, 196, 255);
+  }
+  
+  body.dark-mode .card a:hover {
+    background-color: var(--cor-hover-escuro);
+  }
+  
+  /* FORMULÁRIO */
+  .matricula {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+  
+  form label {
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+  }
+  
+  form input, form select {
+    padding: 0.6rem;
+    border: 1px solid var(--cor-borda-claro);
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  form .erro {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: -0.5rem;
+  }
+  
+  /* BOTÃO */
+  form button, .btn-matricula {
+    background-color: var(--cor-principal-claro);
+    color: rgb(0, 68, 255);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  form button:hover, .btn-matricula:hover {
+    background-color: var(--cor-hover-claro);
+  }
+  
+  body.dark-mode form button,
+  body.dark-mode .btn-matricula {
+    background-color: var(--cor-principal-escuro);
+    color: rgb(172, 196, 255);
+  }
+  
+  body.dark-mode form button:hover,
+  body.dark-mode .btn-matricula:hover {
+    background-color: var(--cor-hover-escuro);
+  }
+  
+  /* ÁREAS DE CONHECIMENTO */
+  .areas-conhecimento {
+    max-width: 300px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: var(--cor-card-claro);
+    border-radius: 8px;
+  }
+  
+  .areas-conhecimento h3 {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 1rem;
+  }
+  
+  .areas-conhecimento ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .areas-conhecimento li {
+    padding: 0.25rem 0;
+    border-bottom: 1px solid var(--cor-borda-claro);
+  }
+  
+  body.dark-mode .areas-conhecimento {
+    background-color: var(--cor-card-escuro);
+  }
+  
+  /* RODAPÉ */
+  footer {
+    background-color: var(--cor-card-claro);
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-around;
+    border-top: 1px solid var(--cor-borda-claro);
+  }
+  
+  footer .coluna {
+    max-width: 250px;
+  }
+  
+  footer h4 {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 0.5rem;
+  }
+  
+  footer p {
+    margin: 0.25rem 0;
+    font-size: 0.95rem;
+  }
+  
+  .rodape-inferior {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: #777;
+  }
+  
+  body.dark-mode footer {
+    background-color: var(--cor-card-escuro);
+  }
+  
+  /* ========== RESPONSIVIDADE ========== */
+  @media (max-width: 991px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    nav ul {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+  
+    .cards {
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+  
+    footer {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .areas-conhecimento {
+      max-width: 90%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .hero h1 {
+      font-size: 1.5rem;
+    }
+  
+    .hero p {
+      font-size: 1rem;
+    }
+  
+    .card img {
+      height: 160px;
+    }
+  
+    .cards {
+      gap: 1rem;
+    }
+  
+    form input, form select {
+      font-size: 0.95rem;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .areas-conhecimento {
+      margin-top: 2rem;
+      padding: 1rem;
+    }
+  
+    footer .coluna {
+      max-width: 100%;
+    }
+  }
+  

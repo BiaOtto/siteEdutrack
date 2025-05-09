@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - EduTech Academy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- CABEÇALHO -->
+    <header>
+        <img src="logo.png" alt="EduTech Academy">
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><button id="toggle-theme">🌙</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- SEÇÃO DE CONTATO -->
+    <section class="contato">
+        <h1>Entre em Contato</h1>
+        <p>Se você tem dúvidas ou quer saber mais sobre nossos cursos, entre em contato conosco. Estamos aqui para ajudar!</p>
+
+        <form action="#" method="post">
+            <label for="nome">Seu Nome</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">Seu E-mail</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <div class="coluna">
+            <h4>EduTech Academy</h4>
+            <p>Transformando carreiras com tecnologia de ponta.</p>
+        </div>
+        <div class="coluna">
+            <h4>Links Úteis</h4>
+            <p><a href="#">Política de Privacidade</a></p>
+            <p><a href="#">Termos de Uso</a></p>
+        </div>
+        <div class="coluna">
+            <h4>Contatos</h4>
+            <p>Email: contato@edutech.com.br</p>
+            <p>Telefone: (11) 1234-5678</p>
+        </div>
+    </footer>
+
+    <div class="rodape-inferior">
+        <p>&copy; 2025 EduTech Academy. Todos os direitos reservados.</p>
+    </div>
+
+    <script>
+        const toggleThemeButton = document.getElementById('toggle-theme');
+        toggleThemeButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
+</body>
+</html>

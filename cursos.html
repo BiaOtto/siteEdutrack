@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos - EduTech Academy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- CABEÇALHO -->
+    <header>
+        <img src="logo.png" alt="EduTech Academy">
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><button id="toggle-theme">🌙</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- SEÇÃO DE CURSOS -->
+    <section class="cursos">
+        <h2>Cursos Disponíveis</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="curso1.jpg" alt="Curso de Desenvolvimento Web">
+                <h3>Desenvolvimento Web</h3>
+                <p>Aprenda a criar websites modernos e responsivos com as tecnologias mais atuais.</p>
+                <a href="curso-desenvolvimento-web.html">Saiba Mais</a>
+            </div>
+            <div class="card">
+                <img src="curso2.jpg" alt="Curso de Data Science">
+                <h3>Data Science</h3>
+                <p>Domine as ferramentas e técnicas de análise de dados para se destacar no mercado.</p>
+                <a href="curso-data-science.html">Saiba Mais</a>
+            </div>
+            <div class="card">
+                <img src="curso3.jpg" alt="Curso de Inteligência Artificial">
+                <h3>Inteligência Artificial</h3>
+                <p>Explore o mundo da IA e aprenda a desenvolver soluções inteligentes.</p>
+                <a href="curso-inteligencia-artificial.html">Saiba Mais</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <div class="coluna">
+            <h4>EduTech Academy</h4>
+            <p>Transformando carreiras com tecnologia de ponta.</p>
+        </div>
+        <div class="coluna">
+            <h4>Links Úteis</h4>
+            <p><a href="#">Política de Privacidade</a></p>
+            <p><a href="#">Termos de Uso</a></p>
+        </div>
+        <div class="coluna">
+            <h4>Contatos</h4>
+            <p>Email: contato@edutech.com.br</p>
+            <p>Telefone: (11) 1234-5678</p>
+        </div>
+    </footer>
+
+    <div class="rodape-inferior">
+        <p>&copy; 2025 EduTech Academy. Todos os direitos reservados.</p>
+    </div>
+
+    <script>
+        const toggleThemeButton = document.getElementById('toggle-theme');
+        toggleThemeButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
+</body>
+</html>
